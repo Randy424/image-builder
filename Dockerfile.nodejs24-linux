@@ -11,7 +11,7 @@ COPY build/* /usr/local/bin/
 COPY yarn-source /yarn-source
 
 RUN setup-base.sh
-RUN GOVERSION=$(curl -s https://go.dev/VERSION?m=text | sed '1s/go//;q') \
+RUN GOVERSION=1.26.8 \
     setup-go.sh
 RUN setup-jq.sh
 RUN setup-yq.sh
